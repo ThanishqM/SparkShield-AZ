@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 100% 25%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 44 65% 52%;
+    --secondary-foreground: 0 0% 5%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 38 18% 70%;
+
+    --accent: 44 65% 52%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 100% / 0.12;
+    --input: 0 0% 100% / 0.14;
+    --ring: 44 65% 52%;
+
+    --radius: 1rem;
+    --success: 142 38% 46%;
+    --success-foreground: 0 0% 100%;
+    --warning: 44 65% 52%;
+    --warning-foreground: 0 0% 5%;
+    --danger: 0 78% 48%;
+    --danger-foreground: 0 0% 100%;
+    --glass: 0 0% 100% / 0.075;
+    --glass-strong: 0 0% 100% / 0.12;
+    --maroon-glow: 0 100% 25% / 0.45;
+    --gold-glow: 44 65% 52% / 0.42;
+    --gradient-hero: radial-gradient(circle at 20% 10%, hsl(var(--primary) / 0.78), transparent 36%), linear-gradient(135deg, hsl(var(--primary)), hsl(var(--background)) 58%, hsl(0 0% 0%));
+    --gradient-card: linear-gradient(145deg, hsl(var(--glass-strong)), hsl(var(--glass)));
+    --shadow-premium: 0 24px 80px -36px hsl(var(--gold-glow)), 0 20px 60px -42px hsl(var(--maroon-glow));
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-image: radial-gradient(circle at top left, hsl(var(--primary) / 0.28), transparent 32rem), radial-gradient(circle at 90% 10%, hsl(var(--secondary) / 0.12), transparent 30rem);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .spark-card {
+    @apply rounded-2xl border border-border bg-card/70 shadow-premium backdrop-blur-xl;
+    background-image: var(--gradient-card);
+  }
+
+  .spark-panel {
+    @apply rounded-2xl border border-border bg-glass backdrop-blur-2xl;
+  }
+
+  .spark-kicker {
+    @apply text-xs font-bold uppercase tracking-[0.22em] text-secondary;
+  }
+
+  .spark-input {
+    @apply rounded-xl border border-input bg-muted/70 px-3 py-2 text-sm text-foreground outline-none transition focus:border-secondary focus:ring-2 focus:ring-secondary/30;
+  }
+
+  .spark-hover {
+    @apply transition duration-300 hover:-translate-y-1 hover:border-secondary/50 hover:shadow-premium;
+  }
+}
