@@ -133,6 +133,9 @@ npm run dev
 [(Add your demo link here)] (https://asu.zoom.us/rec/share/JG8xNNojRISndbiHVM_cwM9P4lpndkS230nGSiXAmED0CQNktKn7vyUie3_FIBdQ.W1uzFIYrJA6yRJzC?startTime=1777225000000
 Passcode: Nr0n3@Q4)
 
+## Slides 
+https://canva.link/ttoecjz3u5rt3ep   
+
 ---
 
 ## 📄 Documentation
